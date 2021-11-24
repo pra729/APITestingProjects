@@ -1,0 +1,935 @@
+{
+	"info": {
+		"_postman_id": "223dd366-5caa-4fa7-8166-47cd256feb4f",
+		"name": "APIClassB7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GoRestService",
+			"item": [
+				{
+					"name": "CreateTheUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9d7379b040fe82fd677f4cb3d8e03dc5828e2f8dd1fb80d7ad8fa155ec61cd5c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"name\": \"VijaySingh1\",\r\n    \"email\": \"VijaySingh@gmail.com\",\r\n    \"gender\": \"male\",\r\n    \"status\": \"Inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v1/users",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTheDataUsingUserID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v1/users/3328",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v1",
+								"users",
+								"3328"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUserData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v1/users",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTheDataUsingTheQueryParam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v1/users?name=VijaySingh&gender=male",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "VijaySingh@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "VijaySingh"
+								},
+								{
+									"key": "status",
+									"value": "Inactive",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "male"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTheUsersDataUsingPatch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9d7379b040fe82fd677f4cb3d8e03dc5828e2f8dd1fb80d7ad8fa155ec61cd5c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"VijaySingh1\",\r\n    \"email\": \"VijaySingh@gmail.com\",\r\n    \"gender\": \"male\",\r\n    \"status\": \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v1/users/3328",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v1",
+								"users",
+								"3328"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTheUsersDataUsingPUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9d7379b040fe82fd677f4cb3d8e03dc5828e2f8dd1fb80d7ad8fa155ec61cd5c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"VijaySingh1\",\r\n    \"email\": \"VijaySingh@gmail.com\",\r\n    \"gender\": \"male\",\r\n    \"status\": \"Inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v1/users/3328",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v1",
+								"users",
+								"3328"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTheCreatedUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9d7379b040fe82fd677f4cb3d8e03dc5828e2f8dd1fb80d7ad8fa155ec61cd5c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v1/users/1332",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v1",
+								"users",
+								"1332"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LocalService",
+			"item": [
+				{
+					"name": "Employees",
+					"item": [
+						{
+							"name": "CreateEMployee",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "applications/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"FirstName\": \"APITEST\",\r\n    \"LastName\": \"Postman\",\r\n    \"Prefix\": \"Dr.\",\r\n    \"BirthSurName\": \"APU\",\r\n    \"Email\": \"APItest12@gmail.com\",\r\n    \"Smoker\": false,\r\n    \"Smokedate\": null,\r\n    \"DateOfBirth\": \"1995-03-15\",\r\n    \"Type\": \"Client\",\r\n    \"Nationality\": \"Indian\",\r\n    \"Address\": {\r\n        \"Street\": \"GandhiRoad\",\r\n        \"HouseNumber\": \"T-101\",\r\n        \"PostalCode\": \"RT5267\",\r\n        \"City\": \"Delhi\",\r\n        \"Country\": \"IND\"\r\n    },\r\n    \"PhoneNumber\": 7889988772\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/Employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEmployeeUsingID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/Employees/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Employees",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllEmpData",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.api+json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/Employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetEmpDataUsingQueryParam",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/Employees?FirstName=APITEST&Email=APItest12@gmail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Employees"
+									],
+									"query": [
+										{
+											"key": "FirstName",
+											"value": "APITEST"
+										},
+										{
+											"key": "Email",
+											"value": "APItest12@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateTheEmpDataUsingPatch",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"FirstName\": \"ManishUpdate123\",\r\n    \"LastName\": \"UpdatedLastName\",\r\n    \"PhoneNumber\": 999999999\r\n    \r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/Employees/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Employees",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateEmpDataUsingPut",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"FirstName\": \"Manish\",\r\n    \"LastName\": \"Postman\",\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/Employees/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Employees",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteTheEmpData",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/Employees/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Employees",
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GitHub",
+			"item": [
+				{
+					"name": "CreateTheRepo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/vnd.github.v3+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"APIClassB7.3\",\r\n    \"description\": \"APi test description\",\r\n    \"homepage\": \"https://google.com\",\r\n    \"private\": true,\r\n    \"visibility\": \"private\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/orgs/APITESTOrg2/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"orgs",
+								"APITESTOrg2",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTheCreatedRepo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/vnd.github.v3+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.github.com/repos/APITESTOrg2/APIClassB7.1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"APITESTOrg2",
+								"APIClassB7.1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllTheRepo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/vnd.github.v3+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.github.com/orgs/APITESTOrg2/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"orgs",
+								"APITESTOrg2",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRepoUsingQueryParam",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/vnd.github.v3+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.github.com/orgs/APITESTOrg1/repos?per_page=5&page=7",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"orgs",
+								"APITESTOrg1",
+								"repos"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "public",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "created",
+									"disabled": true
+								},
+								{
+									"key": "direction",
+									"value": "desc",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTheCreatedRepo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/vnd.github.v3+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.github.com/repos/APITESTOrg2/c",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"APITESTOrg2",
+								"c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PetStore_SwaggerRequest",
+			"item": [
+				{
+					"name": "PlaceTheOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"petId\": 100,\r\n  \"quantity\": 1,\r\n  \"shipDate\": \"2021-11-23T03:22:40.327Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/store/order",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"store",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTheOrderUsingID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/store/order/9223372036854775807",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"store",
+								"order",
+								"9223372036854775807"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInventory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/store/inventory",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"store",
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTheOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/store/order/9223372036854775807",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"store",
+								"order",
+								"9223372036854775807"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUserWithArray",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"username\": \"testUser1\",\r\n    \"firstName\": \"ApiTestF1\",\r\n    \"lastName\": \"ApiTestL1\",\r\n    \"email\": \"testUser1@gmail.com\",\r\n    \"password\": \"testUser1\",\r\n    \"phone\": \"88989898998\",\r\n    \"userStatus\": 1\r\n  },\r\n  {\r\n    \"username\": \"testUser2\",\r\n    \"firstName\": \"ApiTestF2\",\r\n    \"lastName\": \"ApiTestL2\",\r\n    \"email\": \"testUser2@gmail.com\",\r\n    \"password\": \"testUser2\",\r\n    \"phone\": \"8898989893\",\r\n    \"userStatus\": 1\r\n  },\r\n   {\r\n    \"username\": \"testUser3\",\r\n    \"firstName\": \"ApiTestF3\",\r\n    \"lastName\": \"ApiTestL3\",\r\n    \"email\": \"testUser3@gmail.com\",\r\n    \"password\": \"testUser3\",\r\n    \"phone\": \"8898989891\",\r\n    \"userStatus\": 1\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/createWithList",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"createWithList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTheArrayUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/testUser3",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"testUser3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/login?username =testUser3&password =testUser3",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username ",
+									"value": "testUser3"
+								},
+								{
+									"key": "password ",
+									"value": "testUser3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTheData",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":9223372036854775807,\r\n    \"username\": \"testUser3\",\r\n    \"firstName\": \"ApiTestF3\",\r\n    \"lastName\": \"ApiTestL3Update\",\r\n    \"email\": \"testUser3@gmail.com\",\r\n    \"password\": \"testUser3\",\r\n    \"phone\": \"889898989177777777\",\r\n    \"userStatus\": 1\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/testUser3",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"testUser3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
